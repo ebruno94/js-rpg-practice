@@ -7,6 +7,12 @@ export class Character{
     this.intelligence = intelligence;
   };
 
-  
+  getStats() {
+    return `name: ${this.name}, health: ${this.health}, maxHealth: ${this.maxHealth}, strength: ${this.strength}, intelligence: ${this.intelligence}`;
+  };
 
+  useItem(item) {
+    let useItemOnSelf = item.use;
+    return useItemOnSelf(this);
+  };
 }
